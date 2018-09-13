@@ -8,7 +8,20 @@
  * turnMeBaby('Some text'); // 'txet emoS'
  */
 const turnMeBaby = str => {
-  /* your logic here...*/
+
+  if(typeof str !== 'string'){
+  	throw;
+  }
+  if(!str){
+  	return '';
+  }
+  let arr = str.split('');
+  arr = arr.reverse();
+  let res = '';
+  arr.forEach(funtion(item){
+  	res += item;
+  });
+  return res;
 };
 
 export default turnMeBaby;

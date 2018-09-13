@@ -8,7 +8,11 @@
  * isObject(null); // false
  */
 const isObject = data => {
-  /* your logic here...*/
+  let toString = {}.toString;
+  let expected = '[object Array]';
+  let actual =toString.call(data) 
+	//alert( toString.call(data) ); // [object Array]
+return expected === actual;
 };
 
 export default isObject;

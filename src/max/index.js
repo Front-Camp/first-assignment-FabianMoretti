@@ -7,6 +7,15 @@
 * max([-1, 0]);   // 0
 */
 const max = arr => {
+	let res = 0;
+	arr.forEach(function(item){
+		if(typeof item === 'number' && item >=res){
+			if(item !== Infinity && item !== -Infinity){
+			res = item
+		}
+		}
+	})
+	return res;
   /* your logic here...*/
 };
 

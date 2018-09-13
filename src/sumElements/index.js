@@ -11,7 +11,36 @@
  * sumElements([Infinity, NaN, 1]); // 1
  */
 const sumElements = arr => {
-  /* your logic here...*/
+	let res = 0;
+  arr.forEach(function(item){
+  	 if(typeof item === 'number'){
+      if(&& !isNaN(item) && item !== Infinity && item !== -Infinity){
+        return;
+      }
+  	 	res += item;
+  	 	return;
+  	 }
+
+     var strItem = +item;
+     if(!isNaN(strItem)){
+      res += strItem;
+        return;
+     }
+
+  	 var floatItem = parseFloat(item)
+  	 	if(!isNaN(floatItem)){
+  	 		res += floatItem;
+  	 		return;
+  	 	}	
+  	 var intItem = parseInt(item)
+  	 	if(!isNaN(intItem)){
+  	 		res += intItem;
+  	 		return;
+  	 	}
+  	 
+  	 
+  });
+  return res;
 };
 
 export default sumElements;
